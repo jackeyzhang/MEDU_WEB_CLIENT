@@ -21,24 +21,24 @@ public class Student extends Person implements Serializable {
 
 	private static final long serialVersionUID = -4897687701584156505L;
 	
-	private List<MClass> classes;
+	private MClass mclass;
 	
 	private List<Payment> payments;
 	
 	/**
 	 * @return the classes
 	 */
-	public List<MClass> getClasses( )
+	public MClass getMClass( )
 	{
-		return classes;
+		return mclass;
 	}
 
 	/**
 	 * @param classes the classes to set
 	 */
-	public void setClasses( List<MClass> classes )
+	public void setMClass( MClass mclass )
 	{
-		this.classes = classes;
+		this.mclass = mclass;
 	}
 
 	/**

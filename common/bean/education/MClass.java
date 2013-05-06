@@ -4,7 +4,6 @@
 package bean.education;
 
 import java.io.Serializable;
-import java.util.List;
 
 
 /**
@@ -23,9 +22,9 @@ public class MClass implements Serializable{
 	
 	private int number;//课程号 
 	
-	private ClassTime classTime;//上课时间
+	private String classTime;//上课时间
 	
-	private List<Teacher> teachers;//授课老师
+	private Teacher teacher;//授课老师
 
 	private String classRoom;//教室
 	
@@ -50,7 +49,7 @@ public class MClass implements Serializable{
 	/**
 	 * @return the classTime
 	 */
-	public ClassTime getClassTime( )
+	public String getClassTime( )
 	{
 		return classTime;
 	}
@@ -59,7 +58,7 @@ public class MClass implements Serializable{
 	/**
 	 * @param classTime the classTime to set
 	 */
-	public void setClassTime( ClassTime classTime )
+	public void setClassTime( String classTime )
 	{
 		this.classTime = classTime;
 	}
@@ -68,17 +67,17 @@ public class MClass implements Serializable{
 	/**
 	 * @return the teachers
 	 */
-	public List<Teacher> getTeachers( )
+	public Teacher getTeacher( )
 	{
-		return teachers;
+		return teacher;
 	}
 	
 	/**
 	 * @param teachers the teachers to set
 	 */
-	public void setTeachers( List<Teacher> teachers )
+	public void setTeacher( Teacher teacher )
 	{
-		this.teachers = teachers;
+		this.teacher = teacher;
 	}
 
 
@@ -100,4 +99,14 @@ public class MClass implements Serializable{
 		this.classRoom = classRoom;
 	}
 	
+	
+	public String toDbString(String displayString)
+	{
+		return "";
+	}
+	
+	public String toDisplayString(String dbString)
+	{
+		return "";
+	}
 }

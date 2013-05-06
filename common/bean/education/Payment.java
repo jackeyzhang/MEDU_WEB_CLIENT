@@ -20,17 +20,48 @@ import java.util.Date;
 public class Payment implements Serializable{
 
 	private static final long serialVersionUID = 9107652424920992716L;
+	
+	private int id;
 
 	private float payed;//已付金额
 	
 	private Date payDate;//缴费日期
 
-	private Person payee;//收款人
+	private String payee;//收款人
 	
 	private String payer;//付款人
 	
 	private String payWay;//收款方式 现金  cash,刷卡 card
 	
+	/**
+	 * 
+	 */
+	public Payment( )
+	{
+		super( );
+	}
+
+
+
+	/**
+	 * @return the id
+	 */
+	public int getId( )
+	{
+		return id;
+	}
+
+
+	
+	/**
+	 * @param id the id to set
+	 */
+	public void setId( int id )
+	{
+		this.id = id;
+	}
+
+
 	/**
 	 * @return the payed
 	 */
@@ -73,7 +104,7 @@ public class Payment implements Serializable{
 	/**
 	 * @return the payee
 	 */
-	public Person getPayee( )
+	public String getPayee( )
 	{
 		return payee;
 	}
@@ -83,7 +114,7 @@ public class Payment implements Serializable{
 	/**
 	 * @param payee the payee to set
 	 */
-	public void setPayee( Person payee )
+	public void setPayee( String payee )
 	{
 		this.payee = payee;
 	}
