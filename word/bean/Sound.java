@@ -6,6 +6,8 @@ package bean;
 import java.io.Serializable;
 
 /**
+ * ÉùÒô¶ÔÏó
+ * 
  * @author zhangchenhao
  *
  *
