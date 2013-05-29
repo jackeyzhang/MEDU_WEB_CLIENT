@@ -12,15 +12,15 @@ import com.alibaba.druid.pool.DruidPooledConnection;
 
 
 /**
- * Êı¾İ¿â¹¤¾ß
+ * æ•°æ®åº“è¿æ¥å·¥å…·
  * 
- * Ê¹ÓÃdruidÁ¬½Ó³Ø
+ * ä½¿ç”¨druidè¿æ¥æ± 
  * 
  * @author zhangchenhao
  *
  *
  * 2013-5-27
- * ÏÂÎç5:03:30
+ * 5:03:30
  *
  * TODO:
  */

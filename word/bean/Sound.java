@@ -6,13 +6,13 @@ package bean;
 import java.io.Serializable;
 
 /**
- * ÉùÒô¶ÔÏó
+ * å£°éŸ³æ–‡ä»¶
  * 
  * @author zhangchenhao
  *
  *
  * 2013-5-26
- * ÉÏÎç8:40:03
+ * 8:40:03
  *
  * TODO:
  */

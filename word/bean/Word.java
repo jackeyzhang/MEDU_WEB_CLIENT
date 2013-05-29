@@ -11,7 +11,7 @@ import java.util.List;
  *
  *
  * 2013-5-26
- * 上午8:37:28
+ * 8:37:28
  *
  * TODO:
  */
@@ -21,10 +21,10 @@ public class Word implements Serializable {
 
 	private int id;
 	
-	//写法 并非普通汉字的写法 可能有些字根需要图形表示 待扩展
+	//写锟斤拷 锟斤拷锟斤拷锟斤拷通锟斤拷锟街碉拷写锟斤拷 锟斤拷锟斤拷锟斤拷些锟街革拷锟斤拷要图锟轿憋拷示 锟斤拷锟斤拷展
 	private String spell;
 	
-	//读音 考虑到多音字
+	//锟斤拷锟斤拷 锟斤拷锟角碉拷锟斤拷锟斤拷锟斤拷
 	private List<Sound> sounds;
 	
 	public Word() {

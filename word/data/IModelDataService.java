@@ -11,14 +11,14 @@ import java.util.List;
  *
  *
  * 2013-5-27
- * ÏÂÎç4:48:26
+ * 4:48:26
  *
  * TODO:
  */
 public interface IModelDataService<T>{
 	
 	/**
-	 * ¸ù¾ÝÄ£ÐÍÃû×Ö²éÕÒÄ£ÐÍ
+	 * ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½Ö²ï¿½ï¿½ï¿½Ä£ï¿½ï¿½
 	 * 
 	 * @param modelName
 	 * @return
@@ -26,14 +26,14 @@ public interface IModelDataService<T>{
 	IModel getModelByName(String modelName);
 	
 	/**
-	 * ¸ù¾ÝÄ£ÐÍÀàÐÍ²éÕÒÄ£ÐÍ
+	 * ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½Í²ï¿½ï¿½ï¿½Ä£ï¿½ï¿½
 	 * @param modelType
 	 * @return
 	 */
 	List<IModel> listModelByType(String modelType);
 	
 	/**
-	 * ËùÓÐmodel
+	 * ï¿½ï¿½ï¿½ï¿½model
 	 * @return
 	 */
 	List<IModel> listAllModel();

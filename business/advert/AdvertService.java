@@ -5,13 +5,13 @@ package advert;
 
 
 /**
- * 广告服务
+ *  骞垮憡鏈嶅姟
  * 
  * @author zhangchenhao
  *
  *
  * 2013-5-27
- * 下午5:40:15
+ * 5:40:15
  *
  * TODO:
  */

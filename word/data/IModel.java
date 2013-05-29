@@ -5,13 +5,13 @@ package data;
 
 
 /**
- * 模型借口
+ * 鏁版嵁model
  * 
  * @author zhangchenhao
  *
  *
  * 2013-5-27
- * 下午4:51:22
+ * 4:51:22
  *
  * TODO:
  */
