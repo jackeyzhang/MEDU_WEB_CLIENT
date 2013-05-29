@@ -4,15 +4,17 @@ body {
 }
 
 
-#header,#content-left,#content-center,#footer{
+#options,#logoarea,#menucontext,#contentheader,#header,#content-left,#content-center,#footer{
 border-style: solid;
 border-width: 2px;
+border-radius: 5px 5px 5px 5px; 
 }
 
-#header {
-	height:50px;
+#contentheader {
+	height:200px;
 	background: #285C00;
 	border-radius: 10px 10px 10px 10px; 
+	background:url(../pages/background/dark-grey-tile.png)
 }
 
 #container {
@@ -24,16 +26,16 @@ border-width: 2px;
 #content-left {
 	float: left;
 	width: 20%;
-	height:100%;
-	margin: 5px 10px 5px 0px;
+	height:800px;
+	margin: 5px 5px 5px 0px;
 	background: #45930B;
 	border-radius: 5px 5px 5px 5px; 
 }
 
 #content-center {
 	float:left;
-    	width:78%;
-	height:100%;
+    width:79%;
+	height:800px;
 	margin:5px 0px 5px 0;
 	background: #45930B;
 	border-radius: 5px 5px 5px 5px; 
