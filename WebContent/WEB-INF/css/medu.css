@@ -1,0 +1,38 @@
+body {
+	margin:0;
+	background:#ead9b8;
+	line-height:1.2em;
+}
+
+
+#header,#content-left,#content-center,#footer{
+border-style: solid;
+border-width: 2px;
+}
+
+#header {
+	height:50px;
+}
+
+#container {
+	margin: 5px 10px 5px 10px;
+	height:500px;
+}
+
+#content-left {
+	float: left;
+	width: 20%;
+	height:100%;
+	margin: 20px 30px 20px 20px;
+}
+
+#content-center {
+	float:left;
+    width:70%;
+	height:100%;
+	margin:20px 20px 20px 0;
+}
+
+#footer {
+	clear:both;
+}
