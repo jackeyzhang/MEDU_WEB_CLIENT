@@ -1,6 +1,5 @@
 body {
 	margin:0;
-	background:#ead9b8;
 	line-height:1.2em;
 }
 
@@ -12,27 +11,36 @@ border-width: 2px;
 
 #header {
 	height:50px;
+	background: #285C00;
+	border-radius: 10px 10px 10px 10px; 
 }
 
 #container {
 	margin: 5px 10px 5px 10px;
 	height:500px;
+	
 }
 
 #content-left {
 	float: left;
 	width: 20%;
 	height:100%;
-	margin: 20px 30px 20px 20px;
+	margin: 5px 10px 5px 0px;
+	background: #45930B;
+	border-radius: 5px 5px 5px 5px; 
 }
 
 #content-center {
 	float:left;
-    width:70%;
+    	width:78%;
 	height:100%;
-	margin:20px 20px 20px 0;
+	margin:5px 0px 5px 0;
+	background: #45930B;
+	border-radius: 5px 5px 5px 5px; 
 }
 
 #footer {
 	clear:both;
+	background: #285C00;
+	border-radius: 3px 3px 3px 3px; 
 }
