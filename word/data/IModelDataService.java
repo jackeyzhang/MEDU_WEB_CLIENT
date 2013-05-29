@@ -18,7 +18,7 @@ import java.util.List;
 public interface IModelDataService<T>{
 	
 	/**
-	 * ���ģ�����ֲ���ģ��
+	 * 根据名字获取model
 	 * 
 	 * @param modelName
 	 * @return
@@ -26,14 +26,14 @@ public interface IModelDataService<T>{
 	IModel getModelByName(String modelName);
 	
 	/**
-	 * ���ģ�����Ͳ���ģ��
+	 * 根据类型获取到model
 	 * @param modelType
 	 * @return
 	 */
 	List<IModel> listModelByType(String modelType);
 	
 	/**
-	 * ����model
+	 * 列出所有model
 	 * @return
 	 */
 	List<IModel> listAllModel();
