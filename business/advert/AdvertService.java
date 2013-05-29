@@ -18,4 +18,5 @@ package advert;
 public interface AdvertService
 {
 
+    //TODO
 }
