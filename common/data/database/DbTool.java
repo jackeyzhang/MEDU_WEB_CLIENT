@@ -28,7 +28,7 @@ public class DbTool{
 
 	public static final Connection getConnection(){
 		DruidDataSource dataSource = new DruidDataSource();
-	    dataSource.setUrl("jdbc:mysql://localhost/test");
+	    dataSource.setUrl("jdbc:mysql://localhost:3306/jyt");
 	    dataSource.setDriverClassName("com.mysql.jdbc.Driver");
 	    dataSource.setUsername("root");
 	    dataSource.setPassword("root");
@@ -38,7 +38,7 @@ public class DbTool{
 	        conn = dataSource.getConnection();
 	    } catch (SQLException e) {
 	        e.printStackTrace();
-	    }
+	    } 
 	    return conn;
 	}
 	
@@ -55,7 +55,7 @@ public class DbTool{
 	}
 	
 	public static void main(String[] args) {
-	    String sql = "select 1";
+	    String sql = "select * from ke";
 	    Connection conn = null;
 	    try {
 	        conn = getConnection();
