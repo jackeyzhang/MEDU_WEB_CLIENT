@@ -1,7 +1,7 @@
 /**
  * 
  */
-package view;
+package ui;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -22,6 +22,11 @@ import javax.servlet.http.HttpServletResponse;
  */
 
 public class MeduInitServlet extends HttpServlet {
+
+    /**
+     * 
+     */
+    private static final long serialVersionUID = 1L;
 
     @Override
     protected void doPost(final HttpServletRequest req, final HttpServletResponse resp)
