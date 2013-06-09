@@ -3,7 +3,7 @@ CREATE SCHEMA `medu` ;
 delimiter $$
 
 CREATE TABLE `medu_person` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL,
   `birthday` date DEFAULT NULL,
   `hobby` varchar(45) DEFAULT NULL,
@@ -13,7 +13,19 @@ CREATE TABLE `medu_person` (
   `phone` varchar(45) DEFAULT NULL,
   `address` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8$$
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8$$
+
+delimiter $$
+
+CREATE TABLE `medu_mclass` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `classtime` varchar(100) DEFAULT NULL,
+  `teacher` int(11) DEFAULT NULL,
+  `classroom` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_teacher_idx` (`teacher`),
+  CONSTRAINT `fk_teacher` FOREIGN KEY (`teacher`) REFERENCES `medu_person` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8$$
 
 delimiter $$
 
@@ -30,17 +42,6 @@ CREATE TABLE `medu_payment` (
   CONSTRAINT `fk_payee` FOREIGN KEY (`payee`) REFERENCES `medu_person` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_payer` FOREIGN KEY (`payer`) REFERENCES `medu_person` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8$$
-delimiter $$
-
-CREATE TABLE `medu_mclass` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `classtime` varchar(100) DEFAULT NULL,
-  `teacher` int(11) DEFAULT NULL,
-  `classroom` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `fk_teacher_idx` (`teacher`),
-  CONSTRAINT `fk_teacher` FOREIGN KEY (`teacher`) REFERENCES `medu_person` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8$$
 
 delimiter $$
 
@@ -51,9 +52,9 @@ CREATE TABLE `medu_student` (
   PRIMARY KEY (`idmedu_student`),
   KEY `fk_person_idx` (`person`),
   KEY `fk_mclass_idx` (`mclass`),
-  CONSTRAINT `fk_person` FOREIGN KEY (`person`) REFERENCES `medu_person` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `fk_mclass` FOREIGN KEY (`mclass`) REFERENCES `medu_mclass` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8$$
+  CONSTRAINT `fk_mclass` FOREIGN KEY (`mclass`) REFERENCES `medu_mclass` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_person` FOREIGN KEY (`person`) REFERENCES `medu_person` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8$$
 
 delimiter $$
 
@@ -67,7 +68,6 @@ CREATE TABLE `medu_teacher` (
   PRIMARY KEY (`id`),
   KEY `fk_person_idx` (`person`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8$$
-
 
 
 
