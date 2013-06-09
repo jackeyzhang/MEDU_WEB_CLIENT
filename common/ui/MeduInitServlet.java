@@ -31,7 +31,8 @@ public class MeduInitServlet extends HttpServlet {
     @Override
     protected void doPost(final HttpServletRequest req, final HttpServletResponse resp)
             throws ServletException, IOException {
-        
+        resp.setContentType("text/html");
+        resp.setCharacterEncoding("utf-8");
         PrintWriter out = resp.getWriter();
         out.print("Hello world");
         out.close();

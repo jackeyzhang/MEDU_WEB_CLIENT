@@ -11,7 +11,7 @@
 	
 	<servlet-mapping>
 		<servlet-name>MeduInitServlet</servlet-name>
-		<url-pattern>/medu</url-pattern>
+		<url-pattern>/meduInit</url-pattern>
 	</servlet-mapping>
 	
 	<welcome-file-list>
