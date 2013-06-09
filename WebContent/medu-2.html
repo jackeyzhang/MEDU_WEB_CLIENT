@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>MEDU</title>
+<link rel="stylesheet" type="text/css" href="css/medu-2.css" />
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script>
+	  $(function() {
+		  $( "#tabs" ).tabs({
+			  event: "mouseover"
+		  });
+		  var availableTags = [
+			"ActionScript",
+			"AppleScript",
+			"Asp",
+			"BASIC",
+			"C",
+			"C++",
+			"Clojure",
+			"COBOL",
+			"ColdFusion",
+			"Erlang",
+			"Fortran",
+			"Groovy",
+			"Haskell",
+			"Java",
+			"JavaScript",
+			"Lisp",
+			"Perl",
+			"PHP",
+			"Python",
+			"Ruby",
+			"Scala",
+			"Scheme"
+			];
+			$( "#tags" ).autocomplete({
+				source: availableTags
+			});
+			
+			$("#searchbutton").click(function(){
+				alert("尚未实现查找功能");
+			});
+	   });
+</script>
+</head>
+
+<body>
+
+<div id="options"></div>
+
+<div id="blankarea"></div>
+
+
+<div id="content1">
+	<!-- for logo or advert area -->
+	<div id="content-left"> 
+	
+	</div>
+	<div id="content-center">
+		<div id="tabs">
+			<ul>
+				<li><a href="#tabs-1">内容介绍</a></li>
+				<li><a href="#tabs-2">课程设置</a></li>
+				<li><a href="#tabs-3">报名咨询</a></li>
+				<li><a href="#tabs-4">联系我们</a></li>
+			</ul>
+			<div id="tabs-1">
+				<p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+			</div>
+			<div id="tabs-2">
+				<p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+			</div>
+			<div id="tabs-3">
+				<p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+			</div>
+			<div id="tabs-4">
+				<p>公司地址:上海大学</p>
+				<p>联系电话:74110</p>
+			</div>
+		</div>
+		
+		<div id="search">
+			 <label id="searchlabel">输入感兴趣的汉字： </label>
+			 <input id="searchtext"></input>
+			 <button id="searchbutton">搜索</button>
+		</div>
+	</div>
+	<div id="content-right">
+		
+	</div>
+</div>
+
+
+<div id="footer">
+</div>
+
+</body>
+</html>
