@@ -8,52 +8,7 @@
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-<script>
-	  $(function() {
-		  $( "#tabs" ).tabs({
-			  event: "mouseover"
-		  });
-		  var availableTags = [
-			"ActionScript",
-			"AppleScript",
-			"Asp",
-			"BASIC",
-			"C",
-			"C++",
-			"Clojure",
-			"COBOL",
-			"ColdFusion",
-			"Erlang",
-			"Fortran",
-			"Groovy",
-			"Haskell",
-			"Java",
-			"JavaScript",
-			"Lisp",
-			"Perl",
-			"PHP",
-			"Python",
-			"Ruby",
-			"Scala",
-			"Scheme"
-			];
-		  
-			$( "#tags" ).autocomplete({
-				source: availableTags
-			});
-			
-			$("#searchbutton").click(function(){
-				 $.post("meduInit",
-					  {
-					    name:"Donald Duck",
-					    city:"Duckburg"
-					  },
-					  function(data,status){
-					    alert("Data: " + data + "\nStatus: " + status);
-					  });
-			});
-	   });
-</script>
+<script src="js/medu_js.js"></script>
 </head>
 
 <body>
@@ -61,7 +16,6 @@
 <div id="options"></div>
 
 <div id="blankarea"></div>
-
 
 <div id="content1">
 	<!-- for logo or advert area -->
