@@ -37,12 +37,20 @@
 			"Scala",
 			"Scheme"
 			];
+		  
 			$( "#tags" ).autocomplete({
 				source: availableTags
 			});
 			
 			$("#searchbutton").click(function(){
-				alert("尚未实现查找功能");
+				 $.post("meduInit",
+					  {
+					    name:"Donald Duck",
+					    city:"Duckburg"
+					  },
+					  function(data,status){
+					    alert("Data: " + data + "\nStatus: " + status);
+					  });
 			});
 	   });
 </script>
@@ -92,6 +100,12 @@
 	<div id="content-right">
 		
 	</div>
+</div>
+
+<div id="splitline">
+</div>
+
+<div id="content2">
 </div>
 
 
