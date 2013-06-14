@@ -6,10 +6,10 @@ package ui.handler;
 import java.util.HashMap;
 import java.util.Map;
 
-import ui.MeduMainPageUIService;
 import ui.OpConst;
-import ui.UIService;
 import ui.bean.Page;
+import ui.service.MeduMainPageUIService;
+import ui.service.UIService;
 
 /**
  * @author zhangchenhao
@@ -20,7 +20,7 @@ import ui.bean.Page;
  *
  * TODO:
  */
-public class GetContentPageHandler implements UiHandler {
+public class GetContentPageHandler extends  AbstractHandler {
 	
 	UIService uiService = MeduMainPageUIService.getInstance();
 	

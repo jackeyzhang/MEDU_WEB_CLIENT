@@ -1,7 +1,7 @@
 /**
  * 
  */
-package ui;
+package ui.service;
 
 /**
  * 供客户端使用的服务

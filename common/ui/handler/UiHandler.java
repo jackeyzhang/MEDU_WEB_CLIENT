@@ -25,8 +25,9 @@ public interface UiHandler {
 	 */
 	Map<String,Page> getElements();
 	
-
 	
 	String getName();
+	
+	UiHandler nextHandler();
 	
 }
