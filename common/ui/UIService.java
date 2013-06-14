@@ -24,8 +24,6 @@ public interface UIService {
 	
 	public static final String UI_FOOTER = "ui_footer";
 	
-	String getElement(String elementType);
-	
 	String getElement(String elementType,String fragment);
 	
 	Object getElement(String... params);

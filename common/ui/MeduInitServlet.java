@@ -11,6 +11,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import ui.handler.GetContentPageHandler;
+
+import com.alibaba.fastjson.JSON;
+
 /**
  * @author weibinbin
  *
@@ -34,7 +38,10 @@ public class MeduInitServlet extends HttpServlet {
         resp.setContentType("text/html");
         resp.setCharacterEncoding("utf-8");
         PrintWriter out = resp.getWriter();
-        out.print("Hello world");
+        String op = req.getParameter(OpConst.OP);
+        if(op.equals(GetContentPageHandler.getInstance().getName()) ){
+        	out.print(JSON.toJSONString(GetContentPageHandler.getInstance().getElements()));
+        }
         out.close();
     }
     
