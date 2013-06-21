@@ -2,6 +2,8 @@
 后台 servlet + hibernate + mysql
 通信 ajax + json
 
+网站后台技术：GWT
+
 后台说明：
 1 common下是与业务无关的公用类和pojo
 2 common ui下进行了前后台组件的定义，页面内容在后台获取，页面布局在html css 通过id来进行映射
