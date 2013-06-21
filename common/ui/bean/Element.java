@@ -14,37 +14,38 @@ import java.io.Serializable;
  *
  * TODO:
  */
-public class Page implements Serializable{
+public class Element implements Serializable{
 	
 	private static final long serialVersionUID = -4085426329295939212L;
 
-	String name;
+	String id;
 	
 	String content;
 	
-
+	ElementType type = ElementType.Html;
+	
 	/**
 	 * @param name
 	 * @param content
 	 */
-	public Page(String name, String content) {
+	public Element(String id, String content) {
 		super();
-		this.name = name;
+		this.id = id;
 		this.content = content;
 	}
 
 	/**
-	 * @return the name
+	 * @return the id
 	 */
-	public String getName() {
-		return name;
+	public String getId() {
+		return id;
 	}
 
 	/**
-	 * @param name the name to set
+	 * @param id the id to set
 	 */
-	public void setName(String name) {
-		this.name = name;
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	/**
@@ -59,6 +60,20 @@ public class Page implements Serializable{
 	 */
 	public void setContent(String content) {
 		this.content = content;
+	}
+
+	/**
+	 * @return the type
+	 */
+	public ElementType getType() {
+		return type;
+	}
+
+	/**
+	 * @param type the type to set
+	 */
+	public void setType(ElementType type) {
+		this.type = type;
 	}
 	
 }
