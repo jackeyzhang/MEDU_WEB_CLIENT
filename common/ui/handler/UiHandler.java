@@ -5,7 +5,7 @@ package ui.handler;
 
 import java.util.Map;
 
-import ui.bean.Page;
+import ui.bean.Element;
 
 /**
  * @author zhangchenhao
@@ -23,7 +23,7 @@ public interface UiHandler {
 	 * 
 	 * @return
 	 */
-	Map<String,Page> getElements();
+	Map<String,Element> getElements();
 	
 	
 	String getName();

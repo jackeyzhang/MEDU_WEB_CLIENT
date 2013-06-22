@@ -4,6 +4,7 @@
 	<classpathentry kind="src" path="common"/>
 	<classpathentry kind="src" path="business"/>
 	<classpathentry kind="src" path="education"/>
+	<classpathentry kind="src" path="backgroud"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6">
 		<attributes>
 			<attribute name="owner.project.facets" value="java"/>
@@ -30,6 +31,12 @@
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/log4j-1.2.14.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/dom4j-1.6.1.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-logging.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/tomcat5.5"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/tomcat5.5">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="D:/tomcat5.5.17/common/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="com.google.gwt.eclipse.core.GWT_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
 	<classpathentry kind="output" path="WebContent/WEB-INF/classes"/>
 </classpath>
