@@ -37,9 +37,16 @@ public class MeduInitServlet extends HttpServlet {
 		context = new MEDUUIContext();
 	}
 
+	
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException,
+            IOException {
+        doPost(req,resp);
+    }
 
 
-	@Override
+
+    @Override
     protected void doPost(final HttpServletRequest req, final HttpServletResponse resp)
             throws ServletException, IOException {
         resp.setContentType("text/html");
