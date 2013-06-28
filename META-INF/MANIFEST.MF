@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: MEDU
-Bundle-SymbolicName: MEDU
+Bundle-SymbolicName: MEDU_WEB
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: MEDU.jar,
  WebContent/WEB-INF/lib/druid-0.2.12.jar,
