@@ -7,7 +7,6 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/common"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/business"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/education"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/backgroud"/>
         <property name="context-root" value="MEDU"/>
         <property name="java-output-path" value="/MEDU/build/classes"/>
     </wb-module>
