@@ -32,5 +32,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry combineaccessrules="false" kind="src" path="/MEDU_WEB_COMMON"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/tomcat 5.5"/>
 	<classpathentry kind="output" path="WebContent/WEB-INF/classes"/>
 </classpath>
