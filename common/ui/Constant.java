@@ -13,6 +13,6 @@ package ui;
  * TODO:
  */
 public interface Constant {
-	String JSON_PARA_NAME = "saratoga.json";
+	String ActionKey = "actionkey";
 	String REQUEST_ERROR = "requestError";
 }

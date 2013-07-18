@@ -3,8 +3,6 @@
  */
 package ui;
 
-import java.util.Map;
-
 import javax.servlet.http.HttpServletRequest;
 
 import org.hibernate.Session;
@@ -21,22 +19,24 @@ import com.sickle.dao.SessionManager;
  */
 public abstract class Action {
 
-	public void perform(HttpServletRequest request) {
-		Session session = SessionManager.getInstance().getSession();
+	public Object perform(HttpServletRequest request) {
+		//Session session = SessionManager.getInstance().getSession();
+		Object obj = null;
 		try {
-			session.beginTransaction();
+			//session.beginTransaction();
 			validate(request);
-			execute(request);
-			session.getTransaction().commit();
+			obj = execute(request);
+			//session.getTransaction().commit();
 		} catch (Exception e) {
 			request.setAttribute(Constant.REQUEST_ERROR, e.getMessage());
-			session.getTransaction().rollback();
+			//session.getTransaction().rollback();
 		} finally {
-			session.close();
+			//session.close();
 		}
+		return obj;
 	}
 
-	public abstract void execute(HttpServletRequest request) throws Exception;
+	public abstract Object execute(HttpServletRequest request) throws Exception;
 
 	public abstract void validate(HttpServletRequest request) throws Exception;
 

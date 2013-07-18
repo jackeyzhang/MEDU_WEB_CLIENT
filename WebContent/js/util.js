@@ -1,6 +1,7 @@
 
 var Constant = {
-	ajaxurl : "/medu/ajaxservlet"
+	ajaxurl : "/medu/ajaxservlet",
+	actionkey : "actionkey"
 };
 
 var Util = {
@@ -12,5 +13,14 @@ var Util = {
 			success : callback,
 			dataType : "json"
 		});
+	},
+	
+	preparePostData : function(actionkey,data){
+		var postdate = {};
+		if(data){
+			postdate = data;
+		}
+		postdate[Constant.actionkey] = actionkey;
+		return postdate;
 	}
 };

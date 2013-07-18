@@ -1,15 +1,18 @@
 var Medu = {
 
+	Action : "ui.action.UITestAction",
+	
 	testcallback : function(result) {
-		alert(result.name + result.age);
+		alert(result);
 	},
 
 	sendAjaxRequest : function() {
 		var kw = {
 			name : "wbb",
-			age : "20"
+			age : "20",
 		};
-
-		Util.ajaxPost(kw, this.testcallback);
+		
+		var data = Util.preparePostData(this.Action,kw);
+		Util.ajaxPost(data, this.testcallback);
 	}
 };
