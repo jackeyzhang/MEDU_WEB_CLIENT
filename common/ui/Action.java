@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.hibernate.Session;
 
-import com.sickle.dao.SessionManager;
+import com.sickle.dao.support.SessionManager;
 
 /**
  * @author weibinbin
