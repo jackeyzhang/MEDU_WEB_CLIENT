@@ -15,4 +15,6 @@ package ui;
 public interface Constant {
 	String ActionKey = "actionkey";
 	String REQUEST_ERROR = "requestError";
+	
+	String PAGECONTENT = "pagecontent";
 }
