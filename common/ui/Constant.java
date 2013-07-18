@@ -14,4 +14,5 @@ package ui;
  */
 public interface Constant {
 	String JSON_PARA_NAME = "saratoga.json";
+	String REQUEST_ERROR = "requestError";
 }
