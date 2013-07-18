@@ -29,13 +29,18 @@ public class UITestAction extends Action {
 	 */
 	@Override
 	public Object execute(HttpServletRequest request) throws Exception {
+		String name = request.getParameter("name");
+		String age = request.getParameter("age");
 		List<Person> ps = new ArrayList<Person>();
 		Person c1 = new Person();
-		c1.setName("华尔街");
+		c1.setName(name);
+		c1.setAge(age);
 		Person c2 = new Person();
 		c2.setName("英孚");
+		c2.setAge(age);
 		Person c3 = new Person();
 		c3.setName("新东方");
+		c3.setAge(age);
 		ps.add(c1);
 		ps.add(c2);
 		ps.add(c3);

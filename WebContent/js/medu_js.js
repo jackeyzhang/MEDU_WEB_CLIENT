@@ -3,7 +3,14 @@ var Medu = {
 	Action : "ui.action.UITestAction",
 	
 	testcallback : function(result) {
-		alert(result);
+		//alert(result);
+		var str = "";
+		for(var i=0;i<result.length;i++){
+			str +=result[i].name;
+			str +=" : ";
+			str +=result[i].age;
+		}
+		alert(str);
 	},
 
 	sendAjaxRequest : function() {
