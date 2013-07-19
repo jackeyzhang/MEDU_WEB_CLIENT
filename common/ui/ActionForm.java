@@ -5,6 +5,8 @@ package ui;
 
 import java.io.Serializable;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * @author weibinbin
  * 
@@ -20,6 +22,6 @@ public abstract class ActionForm implements Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 
-	public abstract void vilateForm();
+	public abstract void vilateForm(HttpServletRequest request);
 	
 }

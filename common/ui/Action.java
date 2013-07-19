@@ -7,7 +7,6 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.hibernate.Session;
 
-import com.sickle.dao.support.SessionManager;
 
 /**
  * @author weibinbin
@@ -25,7 +24,7 @@ public abstract class Action {
 		try {
 			// session.beginTransaction();
 			if(form!=null){
-				form.vilateForm();
+				form.vilateForm(request);
 			}
 			obj = execute(request, form);
 			// session.getTransaction().commit();

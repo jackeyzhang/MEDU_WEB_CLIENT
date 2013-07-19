@@ -3,6 +3,8 @@
  */
 package ui.form;
 
+import javax.servlet.http.HttpServletRequest;
+
 import ui.ActionForm;
 
 /**
@@ -60,9 +62,10 @@ public class PersonForm extends ActionForm{
 	 * @see ui.ActionForm#vilateForm()
 	 */
 	@Override
-	public void vilateForm() {
+	public void vilateForm(HttpServletRequest request) {
 		if(this.name==null||this.age==null){
 			throw new RuntimeException("name or age is null");
 		}
 	}
+	
 }
