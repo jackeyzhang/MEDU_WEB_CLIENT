@@ -9,7 +9,9 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 
 import ui.Action;
+import ui.ActionForm;
 import ui.bean.Person;
+import ui.form.PersonForm;
 
 /**
  * @author weibinbin
@@ -26,32 +28,24 @@ public class UITestAction extends Action {
 	 * @see ui.Action#execute(javax.servlet.http.HttpServletRequest)
 	 */
 	@Override
-	public Object execute(HttpServletRequest request) throws Exception {
-		String name = request.getParameter("name");
-		String age = request.getParameter("age");
+	public Object execute(HttpServletRequest request,ActionForm form) throws Exception {
+		PersonForm personForm = (PersonForm)form;
 		List<Person> ps = new ArrayList<Person>();
 		Person c1 = new Person();
-		c1.setName(name);
-		c1.setAge(age);
+		c1.setName(personForm.getName());
+		c1.setAge(personForm.getAge());
+		c1.setGirlfriends(personForm.getGirlfriends());
 		Person c2 = new Person();
 		c2.setName("英孚");
-		c2.setAge(age);
+		c2.setAge(personForm.getAge());
+		c2.setGirlfriends(personForm.getGirlfriends());
 		Person c3 = new Person();
 		c3.setName("新东方");
-		c3.setAge(age);
+		c3.setAge(personForm.getAge());
+		c3.setGirlfriends(personForm.getGirlfriends());
 		ps.add(c1);
 		ps.add(c2);
 		ps.add(c3);
 		return ps;
 	}
-
-	/* (non-Javadoc)
-	 * @see ui.Action#validate(javax.servlet.http.HttpServletRequest)
-	 */
-	@Override
-	public void validate(HttpServletRequest request) throws Exception {
-		// TODO Auto-generated method stub
-
-	}
-
 }

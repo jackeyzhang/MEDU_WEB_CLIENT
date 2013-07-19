@@ -1,7 +1,8 @@
 
 var Constant = {
 	ajaxurl : "/medu/ajaxservlet",
-	actionkey : "actionkey"
+	actionkey : "actionkey",
+	formkey:"formkey"
 };
 
 var Util = {
@@ -9,18 +10,19 @@ var Util = {
 		$.ajax({
 			type : "post",
 			url : Constant.ajaxurl,
-			data : kw,
+			data : $.param(kw,true),
 			success : callback,
 			dataType : "json"
 		});
 	},
 	
-	preparePostData : function(actionkey,data){
+	preparePostData : function(actionkey,formkey,data){
 		var postdate = {};
 		if(data){
 			postdate = data;
 		}
 		postdate[Constant.actionkey] = actionkey;
+		postdate[Constant.formkey] = formkey;
 		return postdate;
 	}
 };

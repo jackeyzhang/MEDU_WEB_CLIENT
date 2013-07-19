@@ -19,25 +19,27 @@ import com.sickle.dao.support.SessionManager;
  */
 public abstract class Action {
 
-	public Object perform(HttpServletRequest request) {
-		//Session session = SessionManager.getInstance().getSession();
+	public Object perform(HttpServletRequest request, ActionForm form) {
+		// Session session = SessionManager.getInstance().getSession();
 		Object obj = null;
 		try {
-			//session.beginTransaction();
-			validate(request);
-			obj = execute(request);
-			//session.getTransaction().commit();
-		} catch (Exception e) {
+			// session.beginTransaction();
+			if(form!=null){
+				form.vilateForm();
+			}
+			obj = execute(request, form);
+			// session.getTransaction().commit();
+		} catch (Throwable e) {
+			e.printStackTrace();
 			request.setAttribute(Constant.REQUEST_ERROR, e.getMessage());
-			//session.getTransaction().rollback();
+			// session.getTransaction().rollback();
 		} finally {
-			//session.close();
+			// session.close();
 		}
 		return obj;
 	}
 
-	public abstract Object execute(HttpServletRequest request) throws Exception;
-
-	public abstract void validate(HttpServletRequest request) throws Exception;
+	public abstract Object execute(HttpServletRequest request, ActionForm form)
+			throws Exception;
 
 }

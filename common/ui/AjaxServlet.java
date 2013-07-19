@@ -5,8 +5,6 @@ package ui;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.io.Reader;
-import java.util.Map;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -35,22 +33,30 @@ public class AjaxServlet extends HttpServlet {
 		resp.setCharacterEncoding("utf-8");
 
 		String classFullName = req.getParameter(Constant.ActionKey);
-
+		String formClassName = req.getParameter(Constant.ActionForm);
 		Action action = null;
-
+		ActionForm form = null;
 		try {
 			Class actionClass = Class.forName(classFullName);
 			action = (Action) actionClass.newInstance();
+
+			if (formClassName != null && !"".equals(formClassName)) {
+				Class formClass = Class.forName(formClassName);
+				form = (ActionForm) formClass.newInstance();
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
-		Object obj = action.perform(req);
+		// fill in parameter to form
+		if (form != null) {
+			FormFill.initForm(req, form);
+		}
+		// execute action
+		Object obj = action.perform(req, form);
 
 		if (obj != null) {
 			PrintWriter out = resp.getWriter();
 			out.println(JSON.toJSONString(obj));
-			out.close();
 		}
 
 	}
