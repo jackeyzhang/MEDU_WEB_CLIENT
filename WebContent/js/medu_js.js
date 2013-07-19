@@ -2,6 +2,7 @@ var Medu = {
 
 	Action : "ui.action.UITestAction",
 	Form:"ui.form.PersonForm",
+	
 	testcallback : function(result) {
 		var str = "";
 		for(var i=0;i<result.length;i++){
