@@ -9,9 +9,11 @@ import java.util.Map;
 
 import ui.Constant;
 
-import com.sickle.dao.SchoolDaoService;
+import com.sickle.dao.DaoServiceFactory;
+import com.sickle.exception.CodeException;
 import com.sickle.pojo.edu.School;
-import com.sickle.service.itf.ISchoolService;
+import com.sickle.pojo.website.WebUi;
+import com.sickle.service.itf.IWebUiService;
 
 /**
  * @author weibinbin
@@ -27,9 +29,17 @@ public class PageCacheManager {
 	
 	private Map<String, List<?>> cacheMap = new HashMap<String, List<?>>();
 
-	private ISchoolService schoolService = SchoolDaoService.getInstance();
+	private static IWebUiService uiDaoService = null;
 
 	public static PageCacheManager getInstance(){
+		 try
+		{
+			 uiDaoService = DaoServiceFactory.getService( IWebUiService.class );
+		}
+		catch ( CodeException e )
+		{
+			e.printStackTrace();
+		}
 		return manger;
 	}
 	
@@ -37,15 +47,12 @@ public class PageCacheManager {
 	 * init cacheMap
 	 */
 	public void initPageCache() {
-		List<School> sch = schoolService.getAllSchool();
-		if (sch != null && sch.size() != 0) {
-			cacheMap.put(Constant.PAGECONTENT, sch);
-		}
+		
 	}
 
 	// get page content
-	public synchronized List<School> getPageContent() {
-		return (List<School>) cacheMap.get(Constant.PAGECONTENT);
+	public synchronized WebUi getPageContent() {
+		return null;
 	}
 
 	// update pagecontent
