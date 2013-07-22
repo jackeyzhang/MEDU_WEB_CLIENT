@@ -70,7 +70,7 @@ public class FormFill {
 			return null;
 		}
 
-		Object[] objs = new Object[value.length - 1];
+		Object[] objs = new Object[value.length];
 		if (type == String[].class) {
 			return value;
 		} else if (type == short[].class || type == Short[].class) {

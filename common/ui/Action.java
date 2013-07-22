@@ -24,7 +24,7 @@ public abstract class Action {
 		try {
 			// session.beginTransaction();
 			if(form!=null){
-				form.vilateForm(request);
+				form.vilateForm();
 			}
 			obj = execute(request, form);
 			// session.getTransaction().commit();

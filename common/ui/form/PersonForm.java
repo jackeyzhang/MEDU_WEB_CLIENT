@@ -62,7 +62,7 @@ public class PersonForm extends ActionForm{
 	 * @see ui.ActionForm#vilateForm()
 	 */
 	@Override
-	public void vilateForm(HttpServletRequest request) {
+	public void vilateForm() {
 		if(this.name==null||this.age==null){
 			throw new RuntimeException("name or age is null");
 		}

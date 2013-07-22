@@ -22,6 +22,6 @@ public abstract class ActionForm implements Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 
-	public abstract void vilateForm(HttpServletRequest request);
+	public abstract void vilateForm();
 	
 }
