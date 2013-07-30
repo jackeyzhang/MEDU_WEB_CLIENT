@@ -4,71 +4,47 @@ body {
 	background: none repeat scroll 0 0;
 }
 
-
-#options{
-	border-style: solid;
-	border-width: 0.5px;
-	margin: 5px 0px 0px 0px;
-	height:35px;
-}
-
 #logoarea{
 	border-style: solid;
-	border-width: 0.5px;
+	border-width: thin;
 	border-radius: 5px 5px 5px 5px; 
 	margin: 0px 5px 5px 0px;
-	height:120px;
-	width:80%;
-	margin-left: auto;
-	margin-right: auto;
-	background:url(../images/background/dark-grey-tile.png)
-}
-
-#menucontext{
-	border-style: solid;
-	border-width: 0.5px;
-	border-radius: 5px 5px 5px 5px; 
-	margin: 5px 5px 5px 0px;
-	width:80%;
+	height:50px;
+	width:100%;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-#managerlogin{
-	margin-right：0px;
-}
-
-#content1 {
-	width:80%;
+#content {
+	width:90%;
 	margin: 0px 5px 5px 0px;
+	height:auto;
 	height:600px;
 	margin-left: auto;
 	margin-right: auto;
-	background:url(../images/background/dark-grey-tile.png)
 }
 
-#content-left {
-	float: left;
-	width: 30%;
-	height:100%;
-	margin: 0px 5px 5px 0px;
-	background: #45930B;
-	border-radius: 5px 5px 5px 5px; 
+#teacherContent {
+	border-style: solid;
+	border-width: thin;
+    width:100%;
+    height:auto;
+	min-height:200px;
+	margin: 10px 0px 10px 0px;
 }
 
-#content-center {
-	float:left;
-    width:69%;
-	height:100%;
-	margin:0px 0px 5px 0;
-	background: #45930B;
-	border-radius: 5px 5px 5px 5px; 
-	margin-left: auto;
-	margin-right: auto;
+
+#schoolContent {
+	border-style: solid;
+	border-width: thin;
+    width:100%;
+    height:auto;
+	min-height:300px;
+	margin: 0px 0px 10px 0px;
 }
 
 #footer {
-	clear:both;
-	border-radius: 3px 3px 3px 3px; 
+	height:50px;
+	border-radius: 1px 1px 1px 1px; 
 	background:url(../images/background/dark-grey-tile.png)
 }
