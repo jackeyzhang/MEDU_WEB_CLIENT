@@ -4,7 +4,9 @@
 package ui.action;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -30,6 +32,7 @@ public class UITestAction extends Action {
 	@Override
 	public Object execute(HttpServletRequest request,ActionForm form) throws Exception {
 		PersonForm personForm = (PersonForm)form;
+		
 		List<Person> ps = new ArrayList<Person>();
 		Person c1 = new Person();
 		c1.setName(personForm.getName());
@@ -46,6 +49,8 @@ public class UITestAction extends Action {
 		ps.add(c1);
 		ps.add(c2);
 		ps.add(c3);
-		return ps;
+		Map map = new HashMap();
+		map.put("person", ps);
+		return map;
 	}
 }

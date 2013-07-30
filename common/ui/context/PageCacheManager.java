@@ -11,9 +11,8 @@ import ui.Constant;
 
 import com.sickle.dao.DaoServiceFactory;
 import com.sickle.exception.CodeException;
-import com.sickle.pojo.edu.School;
-import com.sickle.pojo.website.WebUi;
-import com.sickle.service.itf.IWebUiService;
+import com.sickle.pojo.edu.Teacher;
+import com.sickle.service.itf.ITeacherService;
 
 /**
  * @author weibinbin
@@ -26,38 +25,50 @@ import com.sickle.service.itf.IWebUiService;
 public class PageCacheManager {
 
 	public static PageCacheManager manger = new PageCacheManager();
-	
+
 	private Map<String, List<?>> cacheMap = new HashMap<String, List<?>>();
 
-	private static IWebUiService uiDaoService = null;
+	private static ITeacherService teacheService = null;
 
-	public static PageCacheManager getInstance(){
-		 try
-		{
-			 uiDaoService = DaoServiceFactory.getService( IWebUiService.class );
-		}
-		catch ( CodeException e )
-		{
+	static {
+		try {
+			teacheService = DaoServiceFactory.getService(ITeacherService.class);
+		} catch (CodeException e) {
 			e.printStackTrace();
 		}
-		return manger;
-	}
-	
-	/**
-	 * init cacheMap
-	 */
-	public void initPageCache() {
-		
 	}
 
-	// get page content
-	public synchronized WebUi getPageContent() {
-		return null;
+	public static PageCacheManager getInstance() {
+		return manger;
+	}
+
+	public Map<String, List<?>> getCacheMap() {
+		Map<String, List<?>> cloneMap = new HashMap<String, List<?>>();
+		cloneMap.putAll(cacheMap);
+		return cloneMap;
 	}
 
 	// update pagecontent
-	public synchronized void updatePageContent() {
-		//重新加载一遍
-		
+	protected void updatePageContent(String key, List value) {
+		cacheMap.remove(key);
+		cacheMap.put(key, value);
 	}
+
+	public List getCacheValue(String key) {
+		return cacheMap.get(key);
+	}
+
+	/**
+	 * init cacheMap
+	 * 
+	 * @throws Exception
+	 */
+	void initPageCache() throws Exception {
+		List<Teacher> ts = teacheService.getPopularTeacher();
+		// 转化成ui bean
+
+		// 保持到cache中
+		cacheMap.put(Constant.TEACHERCACHE, ts);
+	}
+
 }

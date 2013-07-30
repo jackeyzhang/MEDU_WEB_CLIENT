@@ -3,7 +3,6 @@
  */
 package ui.context;
 
-import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
@@ -25,9 +24,11 @@ public class ActionContext implements ServletContextListener {
 	 */
 	@Override
 	public void contextInitialized(ServletContextEvent arg0) {
-		ServletContext context = arg0.getServletContext();
-		PageCacheManager manger = PageCacheManager.getInstance().getInstance();
-		manger.initPageCache();
+		try {
+			PageCacheManager.getInstance().initPageCache();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	/*

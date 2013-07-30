@@ -19,5 +19,5 @@ public interface Constant {
 	
 	String REQUEST_ERROR = "requestError";
 	
-	String PAGECONTENT = "pagecontent";
+	String TEACHERCACHE = "teacherCache";
 }

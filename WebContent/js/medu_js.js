@@ -4,12 +4,13 @@ var Medu = {
 	Form:"ui.form.PersonForm",
 	
 	testcallback : function(result) {
+		var person = result.person;
 		var str = "";
-		for(var i=0;i<result.length;i++){
-			str +=result[i].name;
+		for(var i=0;i<person.length;i++){
+			str +=person[i].name;
 			str +=" : ";
-			str +=result[i].age;
-			str +=result[i].girlfriends;
+			str +=person[i].age;
+			str +=person[i].girlfriends;
 			str +=" || ";
 		}
 		alert(str);
