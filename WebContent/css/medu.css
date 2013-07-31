@@ -1,7 +1,7 @@
 body {
 	margin:0;
 	line-height:1.2em;
-	background: none repeat scroll 0 0;
+	background:scroll 0 0;
 }
 
 #logoarea{
@@ -40,16 +40,25 @@ body {
 	margin: 5px 5px 5px 5px;
 }
 
+
 #schoolContent {
 	border-style: solid;
 	border-width: thin;
     width:100%;
     height:auto;
+    overflow:auto;
 	min-height:300px;
 	margin: 0px 0px 10px 0px;
 }
 
+.schoolImg {
+	float: left;
+	margin: 5px 5px 5px 5px;	
+}
+
 #footer {
+	border-style: solid;
+	border-width: thin;
 	height:50px;
 	border-radius: 1px 1px 1px 1px; 
 	background:url(../images/background/dark-grey-tile.png)
