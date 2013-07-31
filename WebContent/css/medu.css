@@ -24,6 +24,13 @@ body {
 	margin-right: auto;
 }
 
+#list{
+	border-style: solid;
+	border-width: thin;
+    width:100%;
+    height:150px;
+    overflow:scroll;
+}
 #teacherContent {
 	border-style: solid;
 	border-width: thin;
