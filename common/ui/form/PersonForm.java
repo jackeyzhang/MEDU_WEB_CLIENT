@@ -3,8 +3,6 @@
  */
 package ui.form;
 
-import javax.servlet.http.HttpServletRequest;
-
 import ui.ActionForm;
 
 /**

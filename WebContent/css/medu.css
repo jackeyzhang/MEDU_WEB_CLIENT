@@ -43,8 +43,16 @@ body {
 
 
 .teacherImg {
+	border-style: solid;
+	border-width: thin;
+	width:250px;
+	height:150px;
 	float: left;
 	margin: 5px 5px 5px 5px;
+	border-radius: 5px 5px 5px 5px; 
+	font-family:Times;
+	font-size:large;
+	font-weight:normal;
 }
 
 
@@ -69,4 +77,8 @@ body {
 	height:50px;
 	border-radius: 1px 1px 1px 1px; 
 	background:url(../images/background/dark-grey-tile.png)
+}
+
+ul{
+	list-style-type:none;
 }

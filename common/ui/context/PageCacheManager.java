@@ -3,11 +3,13 @@
  */
 package ui.context;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import ui.Constant;
+import ui.bean.TeacheInfoBean;
 
 import com.sickle.dao.DaoServiceFactory;
 import com.sickle.exception.CodeException;
@@ -65,10 +67,26 @@ public class PageCacheManager {
 	 */
 	void initPageCache() throws Exception {
 		List<Teacher> ts = teacheService.getPopularTeacher();
-		// 转化成ui bean
-
 		// 保持到cache中
-		cacheMap.put(Constant.TEACHERCACHE, ts);
+		cacheMap.put(Constant.TEACHERCACHE, this.getTeacherInfo(ts));
+	}
+
+	private List<TeacheInfoBean> getTeacherInfo(List<Teacher> ts) {
+		List<TeacheInfoBean> infos = new ArrayList<TeacheInfoBean>();
+		if (ts == null) {
+			return infos;
+		}
+		for (Teacher tea : ts) {
+			TeacheInfoBean bean = new TeacheInfoBean();
+			bean.setId(tea.getId());
+			bean.setName(bean.getName());
+			bean.setSex(tea.getSex());
+			bean.setHobby(bean.getHobby());
+			bean.setContact(tea.getContact());
+			infos.add(bean);
+		}
+		return infos;
+
 	}
 
 }
