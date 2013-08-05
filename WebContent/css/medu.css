@@ -5,18 +5,16 @@ body {
 }
 
 #logoarea{
-	border-style: solid;
-	border-width: thin;
-	border-radius: 5px 5px 5px 5px; 
 	margin: 0px 5px 5px 0px;
-	height:50px;
+	height:auto;
+	min-height:200px;
 	width:100%;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 #content {
-	width:90%;
+	width:100%;
 	margin: 0px 5px 5px 0px;
 	height:auto;
 	mix-height:600px;
@@ -31,16 +29,13 @@ body {
     height:150px;
     overflow:scroll;
 }
+
 #teacherContent {
-	border-style: solid;
-	border-width: thin;
     width:100%;
     height:auto;
 	overflow:auto;
 	min-height:200px;
-	margin: 10px 0px 10px 0px;
 }
-
 
 .teacherImg {
 	border-style: solid;
@@ -53,12 +48,11 @@ body {
 	font-family:Times;
 	font-size:large;
 	font-weight:normal;
+	background-color:#DDDDDD;
 }
 
 
 #schoolContent {
-	border-style: solid;
-	border-width: thin;
     width:100%;
     height:auto;
     overflow:auto;
@@ -72,11 +66,8 @@ body {
 }
 
 #footer {
-	border-style: solid;
-	border-width: thin;
 	height:50px;
 	border-radius: 1px 1px 1px 1px; 
-	background:url(../images/background/dark-grey-tile.png)
 }
 
 ul{

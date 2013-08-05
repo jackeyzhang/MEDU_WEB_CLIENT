@@ -4,9 +4,8 @@
 package ui.context;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+import javax.servlet.ServletContext;
 
 import ui.Constant;
 import ui.bean.TeacheInfoBean;
@@ -28,8 +27,6 @@ public class PageCacheManager {
 
 	public static PageCacheManager manger = new PageCacheManager();
 
-	private Map<String, List<?>> cacheMap = new HashMap<String, List<?>>();
-
 	private static ITeacherService teacheService = null;
 
 	static {
@@ -44,31 +41,15 @@ public class PageCacheManager {
 		return manger;
 	}
 
-	public Map<String, List<?>> getCacheMap() {
-		Map<String, List<?>> cloneMap = new HashMap<String, List<?>>();
-		cloneMap.putAll(cacheMap);
-		return cloneMap;
-	}
-
-	// update pagecontent
-	protected void updatePageContent(String key, List value) {
-		cacheMap.remove(key);
-		cacheMap.put(key, value);
-	}
-
-	public List getCacheValue(String key) {
-		return cacheMap.get(key);
-	}
-
 	/**
 	 * init cacheMap
 	 * 
 	 * @throws Exception
 	 */
-	void initPageCache() throws Exception {
+	void initPageCache(ServletContext context) throws Exception {
 		List<Teacher> ts = teacheService.getPopularTeacher();
 		// 保持到cache中
-		cacheMap.put(Constant.TEACHERCACHE, this.getTeacherInfo(ts));
+		context.setAttribute(Constant.TEACHERCACHE, this.getTeacherInfo(ts));
 	}
 
 	private List<TeacheInfoBean> getTeacherInfo(List<Teacher> ts) {

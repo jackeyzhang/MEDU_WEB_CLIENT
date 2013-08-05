@@ -23,9 +23,9 @@ public class ActionContext implements ServletContextListener {
 	 * .ServletContextEvent)
 	 */
 	@Override
-	public void contextInitialized(ServletContextEvent arg0) {
+	public void contextInitialized(ServletContextEvent event) {
 		try {
-			PageCacheManager.getInstance().initPageCache();
+			PageCacheManager.getInstance().initPageCache(event.getServletContext());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
