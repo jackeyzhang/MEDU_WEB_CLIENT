@@ -5,7 +5,6 @@ body {
 }
 
 #logoarea{
-	margin: 0px 5px 5px 0px;
 	height:auto;
 	min-height:200px;
 	width:100%;
@@ -14,7 +13,7 @@ body {
 }
 
 #content {
-	width:90%;
+	width:95%;
 	margin: 0px 5px 5px 0px;
 	height:auto;
 	mix-height:600px;
@@ -31,10 +30,17 @@ body {
 }
 
 #teacherContent {
-    width:100%;
+    width:80%;
+    float: left;
     height:auto;
 	overflow:auto;
 	min-height:200px;
+}
+
+
+#login {
+	width:15%
+	margin: 0px 5px 5px 5px;
 }
 
 .teacherImg {
@@ -49,6 +55,15 @@ body {
 	background-image:url(../images/mp002.jpg);
 }
 
+.spacing {
+	border-style: solid;
+	border-width: thin;
+	padding-top:20px;
+	height:50px;
+	font-size:large;
+	clear:both;
+
+}
 
 #schoolContent {
     width:100%;
