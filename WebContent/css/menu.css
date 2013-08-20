@@ -1,24 +1,21 @@
 
 #navigation {
 	margin-bottom:10px;	
+	float:right;
 }
 
 #navigation li {
 	list-style: none;
 	float: left;
 	width: 90px;
-	background-color: #5555FF;
 	text-align: center;
 }
 
 #navigation a {
 	text-decoration: none;
-	color: #FFF;
 	display: block; /*a标签转块级元素*/
-	padding: 6px 0px;
-	border-right: solid 1px #FFF;
 }
 
 #navigation a:hover {
-	background-color:#000088;
+	color:#f38094;
 }

@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
 
-
 /* ----------------- Reset all styles ----------------- */
 *{
 	margin:0;
@@ -11,7 +10,7 @@
 
 /* ----------------- Website background and general text colour ----------------- */
 body{
-	background-image:url(../images/backgroundtexture.png);
+	background-image:url(../images3/backgroundtexture.png);
 	background-color:#f9f9f9;
 	color:#2d2d2d;
 }

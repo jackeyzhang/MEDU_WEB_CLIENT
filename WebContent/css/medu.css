@@ -1,25 +1,60 @@
-body {
-	margin: 0;
-	line-height: 1.2em;
-	background: scroll 0 0;
+/* ----------------- Website background and general text colour ----------------- */
+body{
+	background-image:url(../images3/backgroundtexture.png);
+	background-color:#f9f9f9;
+	color:#2d2d2d;
 }
 
-#logoarea {
+/* The rest is pretty self explanatory - it appears in the order that it occurs on the HTML document */
+#top{
 	height: auto;
-	min-height: 200px;
 	overflow: auto;
+}
+
+#logo{
+	margin-top:5%;
+	text-decoration:none;
+}
+
+#logotitle a{
+	color:#2d2d2d;
+	text-decoration:none;
+}
+
+#logoimage{
+	width:27px;
+	padding-right:10px;
+	float:left;
+}
+
+#logotitle{
+	float:left;
+	font-family:Cookie, Helvetica, sans-serif;
+	font-weight:normal;
+	font-size:215%;
+	text-shadow: 0 1px 1px #FFF;
+}
+
+hr{
+	height:1px;
+	width:100%;
+	background-color:#2d2d2d;
+	margin:3% 0;
+}
+
+div.slide img {
 	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
+	height: auto;
+	-webkit-box-shadow: 0 1px 1px #c1c1c1;
+    -moz-box-shadow: 0 1px 1px #c1c1c1;
+    box-shadow: 0 1px 1px #c1c1c1;
+	border-radius:15px;
 }
 
 #content {
-	width: 95%;
-	margin-top:5px;
-	height: auto;
-	mix-height: 600px;
-	margin-left: auto;
-	margin-right: auto;
+	margin:auto;
+	width:80%;
+	height:auto;
 }
 
 #list {
@@ -31,8 +66,7 @@ body {
 }
 
 #teacherContent {
-	margin-top: 10px;
-	width: 75%;
+	width: 100%;
 	float: left;
 	height: auto;
 	overflow: auto;
@@ -42,9 +76,7 @@ body {
 #loginphb {
 	float: right;
 	width: 23%;
-	height: auto;
-	overflow: auto;
-	width: 15% margin:  0px 5px 5px 5px;
+	min-height: 200px;
 }
 
 #login {
@@ -58,14 +90,18 @@ body {
 }
 
 #loginform {
-	position: relative; /* 相对定位 */
+	position: relative;
 	top: 18%;
 	left: 12%;
 	
 }
 
 #phb {
-	height: 150px;
+	border-style: solid;
+	border-width: thin;
+	border-color: #FFAA33;
+	border-radius: 10px 10px 10px 10px;
+	height: auto;
 	margin-top: 20px;
 	background-color: #FFAA33;
 }
@@ -77,15 +113,15 @@ body {
 	border-style: solid;
 	border-width: thin;
 	margin: 5px 5px 5px 5px;
-	border-radius: 5px 5px 5px 5px;
 	font-family: Times;
 	font-size: large;
 	font-weight: normal;
+	color:#fff;
+	background-color:#0044BB;
 }
 
 .spacing {
-	background-color: #5555FF;
-	padding-top:10px;
+	padding-top:5px;
 	height:30px;
 	clear: both;
 }
@@ -105,8 +141,6 @@ body {
 
 #footer {
 	height: 50px;
-	border-radius: 1px 1px 1px 1px;
-	background-color: #5555FF;
 }
 
 ul {
