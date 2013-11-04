@@ -12,8 +12,8 @@ import ui.bean.TeacheInfoBean;
 
 import com.sickle.dao.DaoServiceFactory;
 import com.sickle.exception.CodeException;
-import com.sickle.pojo.edu.Teacher;
-import com.sickle.service.itf.ITeacherService;
+import com.sickle.pojo.edu.Member;
+import com.sickle.service.itf.IMemberService;
 
 /**
  * @author weibinbin
@@ -27,11 +27,11 @@ public class PageCacheManager {
 
 	public static PageCacheManager manger = new PageCacheManager();
 
-	private static ITeacherService teacheService = null;
+	private static IMemberService teacheService = null;
 
 	static {
 		try {
-			teacheService = DaoServiceFactory.getService(ITeacherService.class);
+			teacheService = DaoServiceFactory.getService(IMemberService.class);
 		} catch (CodeException e) {
 			e.printStackTrace();
 		}
@@ -47,17 +47,17 @@ public class PageCacheManager {
 	 * @throws Exception
 	 */
 	void initPageCache(ServletContext context) throws Exception {
-		List<Teacher> ts = teacheService.getPopularTeacher();
+		List<Member> ts = new ArrayList<Member>();//teacheService.getPopularTeacher();
 		// 保持到cache中
 		context.setAttribute(Constant.TEACHERCACHE, this.getTeacherInfo(ts));
 	}
 
-	private List<TeacheInfoBean> getTeacherInfo(List<Teacher> ts) {
+	private List<TeacheInfoBean> getTeacherInfo(List<Member> ts) {
 		List<TeacheInfoBean> infos = new ArrayList<TeacheInfoBean>();
 		if (ts == null) {
 			return infos;
 		}
-		for (Teacher tea : ts) {
+		for (Member tea : ts) {
 			TeacheInfoBean bean = new TeacheInfoBean();
 			bean.setId(tea.getId());
 			bean.setName(bean.getName());
